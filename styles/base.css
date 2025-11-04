@@ -1,0 +1,169 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #1e90ff;
+    color: white;
+
+}
+
+#course-title {
+    display: block;
+    background-color: #153e75;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.2rem;
+}
+
+nav {
+    background-color: #2a2a2a;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #efd336;
+}
+
+
+
+/*main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.about-flex {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.about-flex img {
+    width: 140px;
+    border-radius: 10px;
+}
+
+.country-flex {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.country-flex img {
+    width: 110px;
+    border-radius: 5px;
+}
+
+.resources li {
+    margin: 0.5rem 0;
+} */
+
+/* MAIN CONTENT AREA */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* About Me (wider) + Resources (narrower) */
+    gap: 2rem;
+    align-items: start;
+}
+
+/* MAIN HEADING */
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+/* CARDS */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.card h2 {
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.card-content {
+    display: flex;
+    gap: 1rem;
+}
+
+.card-content img {
+    width: 120px;
+    border-radius: 8px;
+}
+
+/* FLAG SECTION */
+.flag-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.flag-section img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+/* RESOURCES LIST */
+.resources ul {
+    padding-left: 1.5rem;
+}
+
+.resources a {
+    color: #124e78;
+    text-decoration: none;
+}
+
+.resources a:hover {
+    color: #fca311;
+}
+
+footer {
+    background-color: #153e75;
+    color: white;
+    text-align: center;
+    padding: 1.2rem 0;
+    margin-top: 3rem;
+}
