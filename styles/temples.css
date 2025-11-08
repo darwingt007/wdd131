@@ -31,6 +31,22 @@ h1 {
     cursor: pointer;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
 
 .navigation {
     display: none;
