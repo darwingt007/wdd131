@@ -12,7 +12,7 @@ body {
 }
 
 header, main, footer {
-    max-width: auto;
+   
     margin: auto;
     padding: 1rem;
 }
@@ -40,65 +40,6 @@ h2 {
     margin-left: 5rem;
 }
 
-/*.hero {
-    position: relative;
-    width: 100%;
-    margin: auto;
-}
-
-.hero picture, .hero img {
-    width: 100%;
-    border-radius: 6px;
-    height: auto;
-    display: block;
-}
-
-.info-panel {
-    background: white;
-    padding: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    width: 220px;
-    position: absolute;
-}
-
-.data {
-    top: 20px;
-    left: 20px;
-}
-
-.weather {
-    bottom: 20px;
-    right: 20px;
-    position: absolute;
-}
-
-.weather-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.data ul .weather ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.weather-icon-small, .weather-img {
-    width: 35px;
-    height: auto;
-}
-
-@media (min-width: 700px) {
-    .info-panel {
-        position: static;
-        width: auto;
-        margin: 1rem;
-       
-    }
-}*/
 
 footer {
     text-align: center;
