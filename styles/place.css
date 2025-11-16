@@ -5,7 +5,7 @@ body {
 }
 
 header, main, footer {
-    max-width: 700px;
+    max-width: auto;
     margin: auto;
     padding: 1rem;
 }
@@ -20,7 +20,7 @@ header, h1 {
 
 main {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 main, h2 {
@@ -29,46 +29,138 @@ main, h2 {
     margin-bottom: 0.5rem;
 }
 
-.hero img {
-    
-    border-radius: 6px;
-    height: 75%;
+/*.hero {
+    position: relative;
+    width: 100%;
+    margin: auto;
 }
 
-.data, .weather {
+.hero picture, .hero img {
+    width: 100%;
+    border-radius: 6px;
+    height: auto;
+    display: block;
+}
+
+.info-panel {
     background: white;
     padding: 1rem;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    width: 220px;
+    position: absolute;
 }
 
-.data ul {
+.data {
+    top: 20px;
+    left: 20px;
+}
+
+.weather {
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+}
+
+.weather-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.data ul .weather ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.weather-icon {
-    width: 40px;
+.weather-icon-small, .weather-img {
+    width: 35px;
+    height: auto;
 }
 
-@media (min-width: 600px) {
-    main {
-        grid-template-columns: 1fr 1fr;
+@media (min-width: 700px) {
+    .info-panel {
+        position: static;
+        width: auto;
+        margin: 1rem;
+       
     }
-
-    main h2 {
-        grid-column: 1 / 3;
-    }
-
-    .hero {
-        grid-column: 1 / 3;
-    }
-}
+}*/
 
 footer {
-    text-align: left;
+    text-align: center;
     font-size: 0.9rem;
     color: #333;
     margin-top: 2rem;
+}
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero picture,
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay Data + Weather Cards */
+.data-card,
+.weather-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(6px);
+    padding: 1rem 1.3rem;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop positions */
+.data-card {
+    top: 20%;
+    left: 5%;
+}
+
+.weather-card {
+    top: 20%;
+    right: 5%;
+}
+
+/* Weather icon small + aligned */
+.weather-icon {
+    width: 32px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Headings inside panels */
+.data-card h3,
+.weather-card h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile layout — place cards below the image */
+@media (max-width: 700px) {
+
+    .data-card,
+    .weather-card {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+    }
 }
