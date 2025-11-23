@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - Darwin Torrejon</title>
+
+    <meta name="description"
+        content="WDD 131 - Temples photo album by Darwin Torrejon. A collection of temple images and information demonstrating web design skills.">
+
+    <meta name="author" content="Darwin Torrejon">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header>
+        <p>Temple Album</p>
+        <button id="menu" aria-label="Toggle menu">☰</button>
+
+        <nav class="navigation">
+            <a href="#" data-filter="home">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Album</h1>
+
+        <section class="gallery"></section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> | Darwin Torrejon | Bolivia</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
