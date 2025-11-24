@@ -1,15 +1,8 @@
 
-
-
-
-
-
-
-// Footer info
 document.querySelector("#currentYear").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = `Last updated: ${document.lastModified}`;
 
-// Hamburger menu toggle
+
 const mainnav = document.querySelector(".navigation");
 const menuButton = document.querySelector("#menu");
 
@@ -94,7 +87,8 @@ const temples = [
     }
 ];
 
-// Create and display cards
+// cards created to display
+
 function displayTemples(list) {
     const gallery = document.querySelector(".gallery");
     gallery.innerHTML = "";
@@ -120,7 +114,7 @@ function displayTemples(list) {
 
 displayTemples(temples);
 
-// Filters
+// Filters section as requested 
 document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
