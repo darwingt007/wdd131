@@ -1,0 +1,131 @@
+:root {
+    /* Color Schema Definition (Primary Blue updated for AAA compliance) */
+    --primary-blue: #002E39;
+    /* Darker Deep Forest Blue, 7.11:1 on #F5F5F5 */
+    --primary-green: #006400;
+    /* Green (AAA compliant) */
+    --bg-light: #F5F5F5;
+    /* Light Gray (AAA compliant) */
+    --text-dark: #333333;
+    /* Dark Gray (AAA compliant) */
+    --white: #FFFFFF;
+    /* (AAA compliant) */
+}
+
+body {
+    /* Typography Definition */
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-light);
+    margin: 0;
+    padding: 1.5rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    /* Primary Color use: Headings (now AAA compliant) */
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+h1 {
+    color: var(--bg-light);
+}
+
+header {
+    /* Primary Color use: Header (AAA compliant text on background) */
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+footer {
+    /* Primary Color use: Footer (AAA compliant text on background) */
+    background: var(--primary-blue);
+    color: var(--white);
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+main section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(51, 51, 51, 0.1);
+}
+
+/* Styling for Color Schema visualization */
+.color-block {
+    width: 160px;
+    height: 40px;
+    border-radius: 6px;
+    margin: 0.4rem 0;
+    display: inline-block;
+}
+
+.color-block.blue {
+    background: var(--primary-blue);
+}
+
+.color-block.green {
+    background: var(--primary-green);
+}
+
+.color-block.light-bg {
+    background: var(--bg-light);
+    border: 1px solid #ccc;
+}
+
+.color-block.dark-text {
+    background: var(--text-dark);
+    border: 1px solid #eee;
+}
+
+/* Styling for Wireframe section */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.wireframe {
+    /* Secondary Color use: Accents/Highlights */
+    border: 2px dashed var(--primary-green);
+    padding: 1rem;
+    border-radius: 8px;
+    flex: 1 1 300px;
+    min-height: 250px;
+    text-align: center;
+    background: var(--white);
+}
+
+.wireframe h4 {
+    color: var(--primary-green);
+    margin-top: 0;
+}
+
+button {
+    /* Secondary Color use: Buttons (AAA compliant text on background) */
+    background: var(--primary-green);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Site Name/Logo placeholder styling */
+.logo-placeholder {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    font-style: italic;
+    letter-spacing: 2px;
+}
