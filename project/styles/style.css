@@ -1,0 +1,257 @@
+:root {
+    --primary: #002E39;
+    /* Deep Forest Blue */
+    --secondary: #006400;
+    /* Cycling Green */
+    --bg-light: #F5F5F5;
+    /* Light Gray */
+    --text-dark: #333333;
+    /* Primary body text */
+}
+
+
+/* GLOBAL RESETS */
+/* ---------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: 35rem;
+    display: block;
+}
+
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+
+/* HEADER */
+/* ---------------------- */
+.site-header {
+    background: var(--primary);
+    color: #fff;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+nav a {
+    color: #fff;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Nav Button */
+#navToggle {
+    display: none;
+}
+
+
+/* HERO SECTION */
+/* ---------------------- */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 450px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: #fff;
+    padding: .7rem 1.2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: .8rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #008000;
+}
+
+
+/* GRID SECTIONS */
+/* ---------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+
+/* CARDS */
+/* ---------------------- */
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.card img {
+    border-radius: 6px;
+    margin-bottom: .8rem;
+}
+
+
+/* PROGRESS TRACKER */
+/* ---------------------- */
+.tracker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stats p {
+    margin-bottom: .5rem;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--secondary);
+    padding: .6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: var(--secondary);
+    color: #fff;
+}
+
+
+/* FORMS */
+/* ---------------------- */
+form label {
+    display: block;
+    margin-bottom: .3rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: .6rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    background: var(--secondary);
+    color: #fff;
+    padding: .8rem;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.submit-button:hover {
+    background: #008000;
+}
+
+
+/* FOOTER */
+/* ---------------------- */
+.site-footer {
+    background: var(--primary);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    color: #fff;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE NAVIGATION */
+/* ---------------------- */
+@media (max-width: 768px) {
+    #navToggle {
+        display: inline-block;
+        background: var(--secondary);
+        color: white;
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        padding: 1rem;
+        border-radius: 6px;
+        margin-top: 1rem;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Generate quick training sessions and access performance tips to improve cycling." />
+    <meta name="author" content="Darwin Torrejon" />
+    <title>Performance – Healthy Cycling Life</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Healthy Cycling Life</a>
+            <nav><a href="index.html">Home</a> | <a href="performance.html">Performance</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Performance Tips & Session Generator</h1>
+
+        <section class="card">
+            <h2>Quick Session Generator</h2>
+            <label for="focus">Goal</label>
+            <select id="focus">
+                <option value="endurance">Endurance</option>
+                <option value="climbing">Climbing</option>
+                <option value="speed">Speed</option>
+            </select>
+
+            <label for="duration">Duration (minutes)</label>
+            <input id="duration" type="number" value="60" min="20" max="240">
+
+            <button id="genSession" class="btn">Generate Session</button>
+
+            <div id="sessionOutput" class="session-output card hidden" aria-live="polite"></div>
+        </section>
+
+        <section class="card">
+            <h2>Tips</h2>
+            <ul>
+                <li>Stay consistent with small weekly increases.</li>
+                <li>Test nutrition strategies on training rides.</li>
+                <li>Prioritize sleep after hard sessions.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Healthy Cycling Life – <a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

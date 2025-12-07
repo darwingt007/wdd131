@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Submit your product review for the W05 Assignment. Rate a product, provide installation details, feedback, and optional comments." />
+    <meta name="author" content="Darwin Torrejon" />
+    <title>W05 Product Review Form</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Healthy Cycling Life</a>
+            <nav><a href="index.html">Home</a> | <a href="review.html">Product Review</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>W05 Assignment: Product Review Form</h1>
+
+        <section id="form-container">
+            <div id="confirmation-message" class="hidden card">
+                <h2>Review Submitted!</h2>
+                <p>Thank you for your valuable feedback.</p>
+                <p>You have submitted a total of <strong id="counter-display">0</strong> review(s).</p>
+                <a href="review.html" class="new-review-button">Submit Another Review</a>
+            </div>
+
+            <form id="reviewForm" method="get" action="review.html" class="card" aria-label="Product review form">
+                <div class="form-header">
+                    <h2>Product Review</h2>
+                </div>
+
+                <fieldset>
+                    <legend>Product Details</legend>
+
+                    <label for="productName">Product Name <span class="required">*</span></label>
+
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <option value="item1">Riding Helmet Pro</option>
+                        <option value="item2">Hydration Backpack</option>
+                        <option value="item3">All-Weather Cycling Gloves</option>
+                        <option value="item4">Smart Cycle Computer</option>
+                    </select>
+
+                    <label>Overall Rating <span class="required">*</span></label>
+                    <div class="rating-group" role="radiogroup" aria-label="Overall rating">
+                        <input type="radio" id="star5" name="overallRating" value="5" required>
+                        <label for="star5" title="5 stars">⭐⭐⭐⭐⭐</label>
+
+                        <input type="radio" id="star4" name="overallRating" value="4">
+                        <label for="star4" title="4 stars">⭐⭐⭐⭐</label>
+
+                        <input type="radio" id="star3" name="overallRating" value="3">
+                        <label for="star3" title="3 stars">⭐⭐⭐</label>
+
+                        <input type="radio" id="star2" name="overallRating" value="2">
+                        <label for="star2" title="2 stars">⭐⭐</label>
+
+                        <input type="radio" id="star1" name="overallRating" value="1">
+                        <label for="star1" title="1 star">⭐</label>
+                    </div>
+
+                    <label for="installDate">Date of Installation <span class="required">*</span></label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback</legend>
+
+                    <label>Which features did you find useful in the product? (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="durability" name="feature" value="durability">
+                        <label for="durability">Durability</label>
+
+                        <input type="checkbox" id="easeOfUse" name="feature" value="easeOfUse">
+                        <label for="easeOfUse">Ease of Use</label>
+
+                        <input type="checkbox" id="performance" name="feature" value="performance">
+                        <label for="performance">Performance</label>
+
+                        <input type="checkbox" id="design" name="feature" value="design">
+                        <label for="design">Design</label>
+                    </div>
+
+                    <label for="reviewText">Written Review (Optional)</label>
+                    <textarea id="reviewText" name="reviewText" rows="6"></textarea>
+
+                    <label for="userName">Your Name (Optional)</label>
+                    <input type="text" id="userName" name="userName">
+                </fieldset>
+
+                <button type="submit" class="submit-button">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Product Review Site – <a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

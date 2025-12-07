@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Track rides, view stats, and persist your cycling progress locally in the browser." />
+    <meta name="author" content="Darwin Torrejon" />
+    <title>Progress – Healthy Cycling Life</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Healthy Cycling Life</a>
+            <nav><a href="index.html">Home</a> | <a href="progress.html">Progress</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Track Your Rides</h1>
+
+        <section class="tracker">
+            <form id="rideForm" class="card" aria-label="Ride entry form">
+                <label for="rideDate">Date</label>
+                <input type="date" id="rideDate" name="rideDate" required>
+
+                <label for="distance">Distance (km)</label>
+                <input type="number" step="0.1" id="distance" name="distance" required>
+
+                <label for="time">Duration (minutes)</label>
+                <input type="number" id="time" name="time" required>
+
+                <label for="elevation">Elevation Gain (m)</label>
+                <input type="number" id="elevation" name="elevation" required>
+
+                <button type="submit" class="btn">Save Ride</button>
+            </form>
+
+            <aside class="card stats">
+                <h2>Your Stats</h2>
+                <p id="ridesCount">Rides saved: 0</p>
+                <p id="totalDistance">Total distance: 0 km</p>
+                <p id="avgSpeed">Average speed: 0 km/h</p>
+                <button id="clearRides" class="btn-outline">Clear All</button>
+            </aside>
+        </section>
+
+        <section class="ride-list card">
+            <h2>Saved Rides</h2>
+            <ul id="savedRides"></ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Healthy Cycling Life – <a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
