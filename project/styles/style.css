@@ -27,7 +27,7 @@ body {
 
 img {
     max-width: 100%;
-    height: 35rem;
+    height: 37rem;
     display: block;
 }
 
@@ -230,10 +230,31 @@ textarea {
 
 
 /* RESPONSIVE NAVIGATION */
-/* ---------------------- */
-@media (max-width: 768px) {
+/* --- DEFAULT STYLES (Desktop / Large Screens) --- */
+/* These apply to the Command Center dashboard by default */
+
+#navToggle {
+    display: none;
+    /* Hide toggle button on desktop */
+}
+
+.nav-list {
+    display: flex;
+    /* Show menu as a horizontal row */
+    flex-direction: row;
+    gap: 1rem;
+    /* Reset mobile styles */
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- MOBILE STYLES (Screens SMALLER than 700px) --- */
+@media screen and (max-width: 700px) {
+
     #navToggle {
         display: inline-block;
+        /* Show button on mobile */
         background: var(--secondary);
         color: white;
         border: none;
@@ -244,13 +265,18 @@ textarea {
 
     .nav-list {
         display: none;
+        /* Hide the list by default on mobile */
         flex-direction: column;
+        /* Stack items vertically */
         background: var(--primary);
         padding: 1rem;
         border-radius: 6px;
         margin-top: 1rem;
+        width: 100%;
+        /* Ensure it takes full width */
     }
 
+    /* JavaScript will toggle this class to show the menu */
     .nav-list.show {
         display: flex;
     }
