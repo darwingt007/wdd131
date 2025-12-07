@@ -75,12 +75,22 @@ function injectLogo() {
 }
 
 /* ------------------ Nav toggle for small screens ------------------ */
+/* ------------------ Nav toggle for small screens - FIXED ------------------ */
 function initNavToggle() {
-    const toggle = $('#menu-toggle');
-    const navList = $('#nav-menu');
+
+    const toggle = $('#navToggle'); // Corresponds to HTML: <button id="navToggle">
+    const navList = $('#navList');  // Corresponds to HTML: <ul id="navList">
+
+    // This check is now effective, it will continue if elements are found
     if (!toggle || !navList) return;
+
+    // The rest of the logic is correct (using 'open' class which matches your CSS)
     toggle.addEventListener('click', () => {
         navList.classList.toggle('open');
+
+        // BONUS: Update ARIA for accessibility (Highly recommended)
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !isExpanded);
     });
 }
 
