@@ -250,7 +250,7 @@ textarea {
 }
 
 /* --- MOBILE STYLES (Screens SMALLER than 700px) --- */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
     #navToggle {
         display: inline-block;
@@ -277,7 +277,7 @@ textarea {
     }
 
     /* JavaScript will toggle this class to show the menu */
-    .nav-list.show {
+    .nav-list.open {
         display: flex;
     }
 }
